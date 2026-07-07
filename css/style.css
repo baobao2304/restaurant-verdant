@@ -988,8 +988,15 @@ section{position:relative;padding:130px 0}
   text-align:center;flex-wrap:wrap;
 }
 .menu__cta-item{
-  display:flex;align-items:center;gap:12px;
+  display:flex;flex-direction:column;align-items:center;gap:8px;
   font-size:0.9rem;color:var(--text-light);
+}
+.menu__cta-main{
+  display:flex;align-items:center;gap:12px;
+}
+.menu__cta-label{
+  font-size:0.75rem;letter-spacing:0.16em;text-transform:uppercase;
+  color:var(--text-muted);margin-top:4px;
 }
 .menu__cta-icon{font-size:1.3rem}
 .menu__cta-phone{
