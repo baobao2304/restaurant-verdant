@@ -4,6 +4,86 @@
    Card-based menu, Google Maps, prominent branding
    ============================================================ */
 
+/* ═══ VIDEO INTRO OVERLAY ═══ */
+.video-intro{
+  position:fixed;inset:0;z-index:10000;background:var(--green-deep);
+  display:flex;align-items:center;justify-content:center;
+  transition:opacity 1.2s cubic-bezier(0.22,1,0.36,1),visibility 1.2s;
+  overflow:hidden;
+}
+.video-intro--hidden{opacity:0;visibility:hidden;pointer-events:none}
+.video-intro__el{
+  position:absolute;inset:0;width:100%;height:100%;
+  object-fit:cover;z-index:1;
+  filter:brightness(0.55) saturate(1.3) contrast(1.05);
+}
+.video-intro__overlay{
+  position:absolute;inset:0;z-index:2;
+  background:
+    radial-gradient(ellipse 60% 50% at 50% 50%,transparent 0%,rgba(8,26,20,0.4) 60%,rgba(8,26,20,0.9) 100%),
+    linear-gradient(180deg,rgba(8,26,20,0.3) 0%,transparent 30%,transparent 70%,rgba(8,26,20,0.6) 100%);
+  backdrop-filter:blur(2px);
+}
+.video-intro__logo{
+  position:relative;z-index:3;text-align:center;
+  animation:introLogoIn 1.5s cubic-bezier(0.22,1,0.36,1) both;
+}
+.video-intro__logo img{
+  height:100px;width:auto;border-radius:12px;margin:0 auto;
+  filter:drop-shadow(0 0 40px rgba(212,168,83,0.4));
+  animation:introLogoPulse 2s ease-in-out infinite;
+}
+.video-intro__logo::after{
+  content:"Verdant";
+  display:block;font-family:var(--serif),Georgia,serif;
+  font-size:1.6rem;letter-spacing:0.3em;text-transform:uppercase;
+  color:var(--gold,#d4a853);margin-top:16px;
+  text-shadow:0 0 30px rgba(212,168,83,0.5);
+}
+.video-intro__shimmer{
+  position:absolute;bottom:-2px;left:50%;transform:translateX(-50%);
+  width:120px;height:1px;
+  background:linear-gradient(90deg,transparent,var(--gold,#d4a853),transparent);
+  animation:shimmerLine 2s ease-in-out infinite;
+}
+.video-intro__skip{
+  position:absolute;bottom:40px;left:50%;transform:translateX(-50%);
+  z-index:3;color:rgba(255,255,255,0.5);font-family:var(--sans,system-ui,sans-serif);
+  font-size:0.75rem;letter-spacing:0.2em;text-transform:uppercase;
+  cursor:pointer;transition:color .3s;animation:skipFadeIn 2s ease 1.5s both;
+}
+.video-intro__skip:hover{color:rgba(212,168,83,0.9)}
+@keyframes introLogoIn{
+  0%{opacity:0;transform:translateY(20px) scale(0.95)}
+  100%{opacity:1;transform:translateY(0) scale(1)}
+}
+@keyframes introLogoPulse{
+  0%,100%{filter:drop-shadow(0 0 30px rgba(212,168,83,0.3))}
+  50%{filter:drop-shadow(0 0 50px rgba(212,168,83,0.5))}
+}
+@keyframes shimmerLine{
+  0%,100%{opacity:0.3;transform:translateX(-50%) scaleX(0.6)}
+  50%{opacity:1;transform:translateX(-50%) scaleX(1.2)}
+}
+@keyframes skipFadeIn{
+  0%{opacity:0}100%{opacity:1}
+}
+
+/* ═══ HERO VIDEO BG (after intro, before content) ═══ */
+.hero__video-bg{
+  position:absolute;inset:0;z-index:0;overflow:hidden;
+  opacity:0;transition:opacity 2s ease;
+}
+.hero__video-bg.is-active{opacity:0.25}
+.hero__video-bg video{
+  width:100%;height:100%;object-fit:cover;
+  filter:blur(3px) saturate(1.2) brightness(0.5);
+}
+.hero__video-bg::after{
+  content:"";position:absolute;inset:0;
+  background:linear-gradient(180deg,rgba(8,26,20,0.6) 0%,rgba(8,26,20,0.4) 50%,rgba(8,26,20,0.8) 100%);
+}
+
 :root {
   /* ── Emerald Noir ── */
   --green-deep: #081a14;
@@ -856,10 +936,13 @@ section{position:relative;padding:130px 0}
 }
 .loader--hidden{opacity:0;visibility:hidden;pointer-events:none}
 .loader__mark{
-  font-family:var(--serif);font-size:2.5rem;color:var(--gold);
   width:84px;height:84px;border:1.5px solid var(--gold);border-radius:50%;
   display:grid;place-items:center;animation:pulse-gold 2s ease-in-out infinite;
-  background:var(--gold-05);
+  background:var(--gold-05);overflow:hidden;
+}
+.loader__mark img{
+  height:48px;width:auto;border-radius:8px;
+  animation:pulse-gold 2s ease-in-out infinite;
 }
 .loader__bar{
   width:140px;height:2px;background:rgba(255,255,255,0.06);

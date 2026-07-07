@@ -5,7 +5,7 @@
   // ── Loading Screen ──
   const loader = document.createElement("div");
   loader.className = "loader";
-  loader.innerHTML = `<div class="loader__mark">V</div><div class="loader__bar"></div>`;
+  loader.innerHTML = `<div class="loader__mark"><img src="images/logo.png" alt="Verdant" style="height:48px;width:auto;border-radius:8px" /></div><div class="loader__bar"></div>`;
   document.body.prepend(loader);
 
   window.addEventListener("load", () => {
@@ -19,6 +19,49 @@
       setTimeout(() => loader.remove(), 800);
     }, 800);
   });
+
+  // ── Video Intro Overlay ──
+  const videoIntro = document.getElementById("videoIntro");
+  const videoEl = document.getElementById("videoIntroEl");
+  const skipBtn = document.getElementById("videoIntroSkip");
+  const heroVideoBg = document.getElementById("heroVideoBg");
+  let introDismissed = false;
+
+  function dismissIntro() {
+    if (introDismissed || !videoIntro) return;
+    introDismissed = true;
+    videoIntro.classList.add("video-intro--hidden");
+    if (heroVideoBg) heroVideoBg.classList.add("is-active");
+    // Trigger hero reveals
+    setTimeout(() => {
+      document.querySelectorAll(".hero .reveal").forEach((el, i) => {
+        setTimeout(() => el.classList.add("in"), i * 150);
+      });
+    }, 400);
+    setTimeout(() => {
+      if (videoIntro) videoIntro.remove();
+    }, 1300);
+  }
+
+  if (videoEl) {
+    videoEl.addEventListener("loadeddata", () => {
+      // Video loaded — play with intro sequence
+    });
+    videoEl.addEventListener("ended", dismissIntro);
+    videoEl.addEventListener("error", () => {
+      // Video failed — skip intro immediately
+      if (videoIntro) videoIntro.remove();
+      if (heroVideoBg) heroVideoBg.classList.add("is-active");
+      introDismissed = true;
+    });
+  }
+  if (skipBtn) {
+    skipBtn.addEventListener("click", dismissIntro);
+  }
+  // Auto-dismiss after 6s fallback
+  setTimeout(() => {
+    if (!introDismissed && videoIntro) dismissIntro();
+  }, 6000);
 
   // ── Cursor Glow (desktop only) ──
   const glow = document.createElement("div");

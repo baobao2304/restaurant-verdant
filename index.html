@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <meta name="description" content="Verdant — Restaurang med asiatisk fusjonsmat i Sverige. Färsk, säsongens råvaror, varm atmosfär." />
+  <meta name="description" content="Restaurang med asiatisk fusjonsmat i Sverige. Färsk, säsongens råvaror, varm atmosfär." />
   <title>Verdant · Restaurang</title>
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
@@ -11,6 +11,19 @@
   <link rel="stylesheet" href="css/style.css" />
 </head>
 <body>
+
+  <!-- ═══ VIDEO INTRO OVERLAY ═══ -->
+  <div class="video-intro" id="videoIntro">
+    <video class="video-intro__el" id="videoIntroEl" autoplay muted playsinline preload="auto">
+      <source src="images/intro1.mp4" type="video/mp4" />
+    </video>
+    <div class="video-intro__overlay"></div>
+    <div class="video-intro__logo">
+      <img src="images/logo.png" alt="Verdant" />
+      <div class="video-intro__shimmer"></div>
+    </div>
+    <div class="video-intro__skip" id="videoIntroSkip">Tap to skip ▸</div>
+  </div>
 
   <!-- SCROLL PROGRESS -->
   <div class="scroll-progress" id="scrollProgress"></div>
@@ -39,6 +52,11 @@
 
   <!-- ═══ HERO ═══ -->
   <section class="hero" id="top">
+    <div class="hero__video-bg" id="heroVideoBg">
+      <video autoplay muted loop playsinline preload="auto">
+        <source src="images/intro1.mp4" type="video/mp4" />
+      </video>
+    </div>
     <div class="hero__grain"></div>
     <div class="hero__particles" aria-hidden="true">
       <div class="hero__particle"></div><div class="hero__particle"></div>
@@ -53,7 +71,7 @@
     <div class="wrap hero__inner">
       <div class="hero__col hero__col--main">
         <div class="hero__brand reveal">
-          <img src="images/logo_app.png" alt="Verdant" class="hero__brand-img" />
+          <img src="images/logo.png" alt="Verdant" class="hero__brand-img" />
           <span class="hero__brand-name"></span>
         </div>
         <h1 class="hero__title">
@@ -629,8 +647,8 @@
       <div class="footer__col"><h4 data-en="Follow" data-sv="Följ">Följ</h4><p><a href="#">Instagram</a></p><p><a href="#">Facebook</a></p></div>
     </div>
     <div class="wrap footer__bottom">
-      <span>© 2026 Verdant Restaurant.</span>
-      <span>Crafted with care 🌿</span>
+      <span>© 2026 Oishi Restaurant.</span>
+      <span>Crafted by Ryan Pham 🌿</span>
     </div>
   </footer>
 
