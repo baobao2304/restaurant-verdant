@@ -33,13 +33,7 @@
   filter:drop-shadow(0 0 40px rgba(212,168,83,0.4));
   animation:introLogoPulse 2s ease-in-out infinite;
 }
-.video-intro__logo::after{
-  content:"Verdant";
-  display:block;font-family:var(--serif),Georgia,serif;
-  font-size:1.6rem;letter-spacing:0.3em;text-transform:uppercase;
-  color:var(--gold,#d4a853);margin-top:16px;
-  text-shadow:0 0 30px rgba(212,168,83,0.5);
-}
+
 .video-intro__shimmer{
   position:absolute;bottom:-2px;left:50%;transform:translateX(-50%);
   width:120px;height:1px;
