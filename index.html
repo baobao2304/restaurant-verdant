@@ -23,7 +23,7 @@
         <a href="#menu">Thực đơn</a>
         <a href="#chef">Bếp trưởng</a>
         <a href="#gallery">Không gian</a>
-        <a href="#reserve" class="nav__cta">Đặt bàn</a>
+        <a href="https://forms.gle/wkUxGVBScN9rTP6o8" target="_blank" rel="noopener" class="nav__cta">Đặt bàn</a>
       </nav>
       <button class="nav__burger" id="navBurger" aria-label="Menu">
         <span></span><span></span><span></span>
@@ -38,7 +38,7 @@
       <h1 class="hero__title">Hương vị của<br /><em>thiên nhiên tĩnh lặng</em></h1>
       <p class="hero__lead">Một hành trình ẩm thực nơi nguyên liệu theo mùa gặp gỡ kỹ thuật đương đại — trong không gian trầm, xanh và tinh tế.</p>
       <div class="hero__actions">
-        <a href="#reserve" class="btn btn--solid">Đặt bàn ngay</a>
+        <a href="https://forms.gle/wkUxGVBScN9rTP6o8" target="_blank" rel="noopener" class="btn btn--solid">Đặt bàn ngay</a>
         <a href="#menu" class="btn btn--ghost">Xem thực đơn</a>
       </div>
       <div class="hero__meta">
@@ -51,7 +51,8 @@
   </section>
 
   <!-- ABOUT -->
-  <section class="about section-lines" id="about">
+  <section class="about section-soft" id="about">
+    <span class="section-index">I — Câu chuyện</span>
     <div class="wrap about__grid">
       <div class="about__media reveal">
         <div class="about__imgframe">
@@ -73,12 +74,14 @@
   </section>
 
   <!-- MENU -->
-  <section class="menu section-organic" id="menu">
-    <div class="section-organic__content wrap">
+  <section class="menu section-deco" id="menu">
+    <span class="section-index">II — Thực đơn</span>
+    <div class="section-content wrap">
       <div class="section-head reveal">
         <p class="eyebrow">Thực đơn theo mùa</p>
         <h2 class="h2">Tinh hoa từ khu vườn</h2>
         <p class="section-sub">Thực đơn thay đổi theo mùa để đảm bảo nguyên liệu tươi ngon nhất.</p>
+        <div class="ornament"></div>
       </div>
       <div class="menu__cols">
         <div class="menu__col reveal">
@@ -132,7 +135,8 @@
   </section>
 
   <!-- CHEF -->
-  <section class="chef section-dots" id="chef">
+  <section class="chef section-soft" id="chef">
+    <span class="section-index">III — Bếp trưởng</span>
     <div class="wrap chef__grid">
       <div class="chef__text reveal">
         <p class="eyebrow">Người dẫn dắt</p>
@@ -149,11 +153,13 @@
   </section>
 
   <!-- GALLERY -->
-  <section class="gallery" id="gallery">
-    <div class="wrap">
+  <section class="gallery section-organic" id="gallery">
+    <span class="section-index">IV — Không gian</span>
+    <div class="section-content wrap">
       <div class="section-head reveal">
         <p class="eyebrow">Không gian</p>
         <h2 class="h2">Đắm mình trong sắc xanh</h2>
+        <div class="ornament"></div>
       </div>
       <div class="gallery__grid">
         <div class="gallery__cell gallery__cell--tall reveal" data-g="1"></div>
@@ -167,6 +173,7 @@
 
   <!-- RESERVE -->
   <section class="reserve section-glow" id="reserve">
+    <span class="section-index">V — Đặt bàn</span>
     <div class="wrap reserve__grid">
       <div class="reserve__intro reveal">
         <p class="eyebrow">Đặt bàn</p>
@@ -178,41 +185,15 @@
           <li><span>Email</span>hello@verdant.restaurant</li>
         </ul>
       </div>
-      <form class="reserve__form reveal" id="reserveForm" novalidate>
-        <div class="field">
-          <label for="rName">Họ tên</label>
-          <input type="text" id="rName" name="name" placeholder="Nguyễn Văn A" required />
+      <div class="reserve__card reveal">
+        <div class="reserve__card-inner">
+          <div class="ornament"></div>
+          <h3>Giữ bàn cho quý khách</h3>
+          <p>Hoàn tất đặt bàn chỉ trong một phút qua biểu mẫu trực tuyến của chúng tôi. Verdant sẽ xác nhận và chuẩn bị chu đáo cho buổi tối của bạn.</p>
+          <a href="https://forms.gle/wkUxGVBScN9rTP6o8" target="_blank" rel="noopener" class="btn btn--solid btn--full">Mở biểu mẫu đặt bàn</a>
+          <p class="reserve__hours">Mở cửa hằng ngày · 17:00 – 23:00</p>
         </div>
-        <div class="field-row">
-          <div class="field">
-            <label for="rDate">Ngày</label>
-            <input type="date" id="rDate" name="date" required />
-          </div>
-          <div class="field">
-            <label for="rTime">Giờ</label>
-            <input type="time" id="rTime" name="time" required />
-          </div>
-        </div>
-        <div class="field-row">
-          <div class="field">
-            <label for="rGuests">Số khách</label>
-            <select id="rGuests" name="guests">
-              <option>1 khách</option><option>2 khách</option><option>3 khách</option>
-              <option>4 khách</option><option>5 khách</option><option>6+ khách</option>
-            </select>
-          </div>
-          <div class="field">
-            <label for="rPhone">Điện thoại</label>
-            <input type="tel" id="rPhone" name="phone" placeholder="09xx xxx xxx" required />
-          </div>
-        </div>
-        <div class="field">
-          <label for="rNote">Ghi chú</label>
-          <textarea id="rNote" name="note" rows="3" placeholder="Dị ứng, dịp đặc biệt..."></textarea>
-        </div>
-        <button type="submit" class="btn btn--solid btn--full">Xác nhận đặt bàn</button>
-        <p class="reserve__ok" id="reserveOk" hidden>Cảm ơn bạn! Chúng tôi sẽ liên hệ xác nhận sớm.</p>
-      </form>
+      </div>
     </div>
   </section>
 
@@ -220,8 +201,10 @@
   <footer class="footer">
     <div class="wrap footer__grid">
       <div class="footer__brand">
-        <span class="nav__logo-mark">V</span>
-        <span class="footer__name">Verdant</span>
+        <div class="footer__brand-row">
+          <span class="nav__logo-mark">V</span>
+          <span class="footer__name">Verdant</span>
+        </div>
         <p>Fine dining lấy cảm hứng từ thiên nhiên Bắc Âu.</p>
       </div>
       <div class="footer__col">

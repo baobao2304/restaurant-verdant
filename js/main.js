@@ -32,22 +32,4 @@
     { threshold: 0.12 }
   );
   document.querySelectorAll(".reveal").forEach((el) => io.observe(el));
-
-  // Reservation form (demo — no backend)
-  const form = document.getElementById("reserveForm");
-  const ok = document.getElementById("reserveOk");
-  form.addEventListener("submit", (ev) => {
-    ev.preventDefault();
-    if (!form.checkValidity()) {
-      form.reportValidity();
-      return;
-    }
-    ok.hidden = false;
-    form.reset();
-    setTimeout(() => (ok.hidden = true), 6000);
-  });
-
-  // Default reservation date = today
-  const dateInput = document.getElementById("rDate");
-  if (dateInput) dateInput.value = new Date().toISOString().slice(0, 10);
 })();
