@@ -209,6 +209,44 @@
     });
   }
 
+  // ── Mobile Dish Accordion ──
+  function isMobile() { return window.innerWidth <= 768; }
+
+  document.querySelectorAll(".dish").forEach((dish) => {
+    const header = dish.querySelector(".dish__header");
+    const toggle = dish.querySelector(".dish__toggle");
+
+    function handleToggle(e) {
+      if (!isMobile()) return;
+      e.stopPropagation();
+      const wasOpen = dish.classList.contains("is-open");
+
+      // Close all other dishes in same panel
+      const panel = dish.closest(".menu__panel");
+      if (panel) {
+        panel.querySelectorAll(".dish.is-open").forEach((d) => {
+          if (d !== dish) d.classList.remove("is-open");
+        });
+      }
+
+      dish.classList.toggle("is-open");
+
+      // Smooth scroll to opened dish
+      if (!wasOpen) {
+        setTimeout(() => {
+          dish.scrollIntoView({ behavior: "smooth", block: "nearest" });
+        }, 100);
+      }
+    }
+
+    if (header) {
+      header.addEventListener("click", handleToggle);
+    }
+    if (toggle) {
+      toggle.addEventListener("click", handleToggle);
+    }
+  });
+
   // ── Section Visibility ──
   const sectionObserver = new IntersectionObserver((entries) => {
     entries.forEach((entry) => { if (entry.isIntersecting) entry.target.classList.add("section-visible"); });
