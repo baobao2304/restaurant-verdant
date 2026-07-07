@@ -1,0 +1,251 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="Verdant — Nhà hàng fine dining lấy cảm hứng thiên nhiên Bắc Âu. Nguyên liệu theo mùa, không gian trầm ấm, trải nghiệm ẩm thực tinh tế." />
+  <title>Verdant · Fine Dining Restaurant</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;1,400&family=Jost:wght@300;400;500;600&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="css/style.css" />
+</head>
+<body>
+  <!-- NAV -->
+  <header class="nav" id="nav">
+    <div class="nav__inner">
+      <a href="#hero" class="nav__logo">
+        <span class="nav__logo-mark">V</span>
+        <span class="nav__logo-text">Verdant</span>
+      </a>
+      <nav class="nav__links" id="navLinks">
+        <a href="#about">Câu chuyện</a>
+        <a href="#menu">Thực đơn</a>
+        <a href="#chef">Bếp trưởng</a>
+        <a href="#gallery">Không gian</a>
+        <a href="#reserve" class="nav__cta">Đặt bàn</a>
+      </nav>
+      <button class="nav__burger" id="navBurger" aria-label="Menu">
+        <span></span><span></span><span></span>
+      </button>
+    </div>
+  </header>
+
+  <!-- HERO -->
+  <section class="hero section-glow" id="hero">
+    <div class="hero__content reveal">
+      <p class="eyebrow">Est. 2015 · Nordic-inspired fine dining</p>
+      <h1 class="hero__title">Hương vị của<br /><em>thiên nhiên tĩnh lặng</em></h1>
+      <p class="hero__lead">Một hành trình ẩm thực nơi nguyên liệu theo mùa gặp gỡ kỹ thuật đương đại — trong không gian trầm, xanh và tinh tế.</p>
+      <div class="hero__actions">
+        <a href="#reserve" class="btn btn--solid">Đặt bàn ngay</a>
+        <a href="#menu" class="btn btn--ghost">Xem thực đơn</a>
+      </div>
+      <div class="hero__meta">
+        <div><span class="num">17h – 23h</span><span class="lbl">Mở cửa hằng ngày</span></div>
+        <div><span class="num">★ 4.9</span><span class="lbl">Đánh giá thực khách</span></div>
+        <div><span class="num">2 sao</span><span class="lbl">Michelin Guide</span></div>
+      </div>
+    </div>
+    <div class="hero__scroll">Cuộn xuống</div>
+  </section>
+
+  <!-- ABOUT -->
+  <section class="about section-lines" id="about">
+    <div class="wrap about__grid">
+      <div class="about__media reveal">
+        <div class="about__imgframe">
+          <div class="about__badge"><span>15</span>năm<br />tận tâm</div>
+        </div>
+      </div>
+      <div class="about__text reveal">
+        <p class="eyebrow">Câu chuyện của chúng tôi</p>
+        <h2 class="h2">Nơi mỗi món ăn là một khu vườn thu nhỏ</h2>
+        <p>Verdant ra đời từ niềm tin rằng ẩm thực tinh tế không cần phô trương. Chúng tôi tôn vinh nguyên liệu bản địa theo mùa, chế biến bằng sự tiết chế và tôn trọng tự nhiên.</p>
+        <p>Từng chi tiết trong không gian — từ ánh sáng trầm, sắc xanh của rừng đến tiếng lửa nhẹ trong bếp mở — đều được sắp đặt để bạn chậm lại và thưởng thức.</p>
+        <ul class="about__list">
+          <li>Nguyên liệu hữu cơ theo mùa</li>
+          <li>Không gian riêng tư, yên tĩnh</li>
+          <li>Hầm rượu vang chọn lọc 300+ nhãn</li>
+        </ul>
+      </div>
+    </div>
+  </section>
+
+  <!-- MENU -->
+  <section class="menu section-organic" id="menu">
+    <div class="section-organic__content wrap">
+      <div class="section-head reveal">
+        <p class="eyebrow">Thực đơn theo mùa</p>
+        <h2 class="h2">Tinh hoa từ khu vườn</h2>
+        <p class="section-sub">Thực đơn thay đổi theo mùa để đảm bảo nguyên liệu tươi ngon nhất.</p>
+      </div>
+      <div class="menu__cols">
+        <div class="menu__col reveal">
+          <h3 class="menu__cat">Khai vị</h3>
+          <div class="menu__item">
+            <div class="menu__row"><span class="menu__name">Súp bí đỏ khói phong</span><span class="menu__price">185</span></div>
+            <p class="menu__desc">Bí đỏ nướng chậm, dầu hạt phỉ, vụn bánh mì lên men.</p>
+          </div>
+          <div class="menu__item">
+            <div class="menu__row"><span class="menu__name">Cá hồi ướp củ dền</span><span class="menu__price">210</span></div>
+            <p class="menu__desc">Cá hồi Na Uy, củ dền muối, kem thì là.</p>
+          </div>
+          <div class="menu__item">
+            <div class="menu__row"><span class="menu__name">Salad rừng xanh</span><span class="menu__price">160</span></div>
+            <p class="menu__desc">Rau mầm hữu cơ, hạt thông rang, sốt giấm táo.</p>
+          </div>
+        </div>
+        <div class="menu__col reveal">
+          <h3 class="menu__cat">Món chính</h3>
+          <div class="menu__item">
+            <div class="menu__row"><span class="menu__name">Bò Wagyu áp chảo</span><span class="menu__price">620</span></div>
+            <p class="menu__desc">Wagyu A5, khoai mô nghiền, sốt vang đỏ hầm.</p>
+          </div>
+          <div class="menu__item">
+            <div class="menu__row"><span class="menu__name">Vịt nướng mật rừng</span><span class="menu__price">420</span></div>
+            <p class="menu__desc">Ức vịt, mật ong rừng, cải bó xôi áp bơ.</p>
+          </div>
+          <div class="menu__item">
+            <div class="menu__row"><span class="menu__name">Nấm truffle risotto</span><span class="menu__price">380</span></div>
+            <p class="menu__desc">Gạo Arborio, nấm truffle đen, phô mai Parmigiano.</p>
+          </div>
+        </div>
+        <div class="menu__col reveal">
+          <h3 class="menu__cat">Tráng miệng</h3>
+          <div class="menu__item">
+            <div class="menu__row"><span class="menu__name">Bánh sô-cô-la rừng</span><span class="menu__price">150</span></div>
+            <p class="menu__desc">Sô-cô-la 70%, kem tươi, dâu rừng.</p>
+          </div>
+          <div class="menu__item">
+            <div class="menu__row"><span class="menu__name">Panna cotta thảo mộc</span><span class="menu__price">140</span></div>
+            <p class="menu__desc">Kem sữa, húng quế, sốt chanh dây.</p>
+          </div>
+          <div class="menu__item">
+            <div class="menu__row"><span class="menu__name">Sorbet mùa vụ</span><span class="menu__price">120</span></div>
+            <p class="menu__desc">Kem trái cây theo mùa, bạc hà tươi.</p>
+          </div>
+        </div>
+      </div>
+      <p class="menu__note">Giá tính theo nghìn đồng · Thực đơn nếm 7 món: <span>1.450k / khách</span></p>
+    </div>
+  </section>
+
+  <!-- CHEF -->
+  <section class="chef section-dots" id="chef">
+    <div class="wrap chef__grid">
+      <div class="chef__text reveal">
+        <p class="eyebrow">Người dẫn dắt</p>
+        <h2 class="h2">Bếp trưởng Lê An</h2>
+        <p>Với hơn 20 năm kinh nghiệm tại các nhà hàng danh tiếng ở Copenhagen và Tokyo, bếp trưởng Lê An mang triết lý "less is more" vào từng đĩa ăn.</p>
+        <p>Ông tin rằng một món ăn hoàn hảo là khi không còn gì để thêm vào, và cũng không còn gì để bớt đi.</p>
+        <blockquote class="chef__quote">"Nấu ăn là cách tôi kể chuyện về đất, về mùa, và về sự tĩnh lặng."</blockquote>
+        <p class="chef__sign">— Lê An, Executive Chef</p>
+      </div>
+      <div class="chef__media reveal">
+        <div class="chef__imgframe"></div>
+      </div>
+    </div>
+  </section>
+
+  <!-- GALLERY -->
+  <section class="gallery" id="gallery">
+    <div class="wrap">
+      <div class="section-head reveal">
+        <p class="eyebrow">Không gian</p>
+        <h2 class="h2">Đắm mình trong sắc xanh</h2>
+      </div>
+      <div class="gallery__grid">
+        <div class="gallery__cell gallery__cell--tall reveal" data-g="1"></div>
+        <div class="gallery__cell reveal" data-g="2"></div>
+        <div class="gallery__cell reveal" data-g="3"></div>
+        <div class="gallery__cell gallery__cell--wide reveal" data-g="4"></div>
+        <div class="gallery__cell reveal" data-g="5"></div>
+      </div>
+    </div>
+  </section>
+
+  <!-- RESERVE -->
+  <section class="reserve section-glow" id="reserve">
+    <div class="wrap reserve__grid">
+      <div class="reserve__intro reveal">
+        <p class="eyebrow">Đặt bàn</p>
+        <h2 class="h2">Dành một buổi tối cho riêng bạn</h2>
+        <p>Chúng tôi khuyến khích đặt bàn trước để chuẩn bị trải nghiệm trọn vẹn nhất. Đội ngũ sẽ liên hệ xác nhận trong vòng 2 giờ.</p>
+        <ul class="reserve__contact">
+          <li><span>Địa chỉ</span>12 Đường Rừng Xanh, Quận 1, TP.HCM</li>
+          <li><span>Điện thoại</span>+84 28 1234 5678</li>
+          <li><span>Email</span>hello@verdant.restaurant</li>
+        </ul>
+      </div>
+      <form class="reserve__form reveal" id="reserveForm" novalidate>
+        <div class="field">
+          <label for="rName">Họ tên</label>
+          <input type="text" id="rName" name="name" placeholder="Nguyễn Văn A" required />
+        </div>
+        <div class="field-row">
+          <div class="field">
+            <label for="rDate">Ngày</label>
+            <input type="date" id="rDate" name="date" required />
+          </div>
+          <div class="field">
+            <label for="rTime">Giờ</label>
+            <input type="time" id="rTime" name="time" required />
+          </div>
+        </div>
+        <div class="field-row">
+          <div class="field">
+            <label for="rGuests">Số khách</label>
+            <select id="rGuests" name="guests">
+              <option>1 khách</option><option>2 khách</option><option>3 khách</option>
+              <option>4 khách</option><option>5 khách</option><option>6+ khách</option>
+            </select>
+          </div>
+          <div class="field">
+            <label for="rPhone">Điện thoại</label>
+            <input type="tel" id="rPhone" name="phone" placeholder="09xx xxx xxx" required />
+          </div>
+        </div>
+        <div class="field">
+          <label for="rNote">Ghi chú</label>
+          <textarea id="rNote" name="note" rows="3" placeholder="Dị ứng, dịp đặc biệt..."></textarea>
+        </div>
+        <button type="submit" class="btn btn--solid btn--full">Xác nhận đặt bàn</button>
+        <p class="reserve__ok" id="reserveOk" hidden>Cảm ơn bạn! Chúng tôi sẽ liên hệ xác nhận sớm.</p>
+      </form>
+    </div>
+  </section>
+
+  <!-- FOOTER -->
+  <footer class="footer">
+    <div class="wrap footer__grid">
+      <div class="footer__brand">
+        <span class="nav__logo-mark">V</span>
+        <span class="footer__name">Verdant</span>
+        <p>Fine dining lấy cảm hứng từ thiên nhiên Bắc Âu.</p>
+      </div>
+      <div class="footer__col">
+        <h4>Giờ mở cửa</h4>
+        <p>Thứ 2 – Chủ nhật</p>
+        <p>17:00 – 23:00</p>
+      </div>
+      <div class="footer__col">
+        <h4>Liên hệ</h4>
+        <p>+84 28 1234 5678</p>
+        <p>hello@verdant.restaurant</p>
+      </div>
+      <div class="footer__col">
+        <h4>Theo dõi</h4>
+        <p><a href="#">Instagram</a></p>
+        <p><a href="#">Facebook</a></p>
+      </div>
+    </div>
+    <div class="footer__bottom">
+      <span>© 2026 Verdant Restaurant. All rights reserved.</span>
+      <span>Crafted with care 🌿</span>
+    </div>
+  </footer>
+
+  <script src="js/main.js"></script>
+</body>
+</html>
