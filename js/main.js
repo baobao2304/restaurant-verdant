@@ -245,7 +245,7 @@
   });
 
   // ── 3D Tilt Cards ──
-  const cards = document.querySelectorAll(".hero__card, .exp__card, .gallery__placeholder");
+  const cards = document.querySelectorAll(".hero__card, .exp__card, .gallery__placeholder, .contact-btn");
   cards.forEach((card) => {
     card.addEventListener("mousemove", (e) => {
       const rect = card.getBoundingClientRect();

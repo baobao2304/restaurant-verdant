@@ -45,7 +45,7 @@
           <span class="lang-toggle__divider">/</span>
           <button class="lang-btn" data-lang="en">EN</button>
         </div>
-        <a href="https://forms.gle/wkUxGVBScN9rTP6o8" target="_blank" rel="noopener" class="nav__cta" data-en="Order Now" data-sv="Beställ Nu">Beställ Nu</a>
+        <a href="https://forms.gle/wkUxGVBScN9rTP6o8" target="_blank" rel="noopener" class="nav__cta" data-en="Order Online" data-sv="Beställ Online">Beställ Online</a>
       </nav>
       <button class="nav__burger" id="navBurger" aria-label="Menu"><span></span><span></span><span></span></button>
     </div>
@@ -81,8 +81,8 @@
         </h1>
         <p class="hero__lead reveal" data-en="Discover authentic Asian flavors and premium bubble tea in a warm, welcoming atmosphere." data-sv="Upptäck äkta asiatiska smaker och premium bubble tea i en varm, trevlig atmosfär.">Upptäck äkta asiatiska smaker och premium bubble tea i en varm, trevlig atmosfär.</p>
         <div class="hero__actions reveal">
-          <a href="https://forms.gle/wkUxGVBScN9rTP6o8" target="_blank" rel="noopener" class="btn btn--gold" data-en="Order Now" data-sv="Beställ Nu">Beställ Nu</a>
-          <a href="#menu" class="btn btn--line" data-en="View Menu" data-sv="Se Meny">Se Meny</a>
+          <a href="https://forms.gle/wkUxGVBScN9rTP6o8" target="_blank" rel="noopener" class="btn btn--gold" data-en="Order Online" data-sv="Beställ Online">Beställ Online</a>
+          <a href="tel:+46793421186" class="btn btn--line" data-en="Call Us" data-sv="Ring Oss">Ring Oss</a>
         </div>
       </div>
       <aside class="hero__col hero__col--side reveal">
@@ -556,28 +556,27 @@
 
       </div>
 
-      <!-- <div class="menu__cta-bar reveal">
-        <div class="menu__cta-item">
-          <span class="menu__cta-icon">📞</span>
-          <span data-en="Call to pre-order" data-sv="Ring för att förbeställa">Ring för att förbeställa</span>
-          <a href="tel:+46793421186" class="menu__cta-phone">+46 793 421 186</a>
-        </div>
-      </div> -->
       <div class="menu__cta-bar reveal">
   <div class="menu__cta-item">
-    <div class="menu__cta-main">
-      <span class="menu__cta-icon">📋</span>
-      <a href="https://forms.gle/wkUxGVBScN9rTP6o8" target="_blank" rel="noopener" class="menu__cta-phone" data-en="Order via Form" data-sv="Beställ via formulär">
-        Beställ via formulär
-      </a>
-    </div>
-    <span
-      class="menu__cta-label"
-      data-en="Place your order online"
-      data-sv="Lägg din beställning online"
-    >
-      Lägg din beställning online
-    </span>
+    <a href="https://forms.gle/wkUxGVBScN9rTP6o8" target="_blank" rel="noopener" class="contact-btn contact-btn--form">
+      <span class="contact-btn__icon">📋</span>
+      <span class="contact-btn__text">
+        <span class="contact-btn__title" data-en="Order Online" data-sv="Beställ Online">Beställ Online</span>
+        <span class="contact-btn__sub" data-en="Fill in our order form" data-sv="Fyll i vårt beställningsformulär">Fyll i vårt beställningsformulär</span>
+      </span>
+      <span class="contact-btn__arrow">→</span>
+    </a>
+  </div>
+  <div class="menu__cta-divider" data-en="or" data-sv="eller">eller</div>
+  <div class="menu__cta-item">
+    <a href="tel:+46793421186" class="contact-btn contact-btn--call">
+      <span class="contact-btn__icon">📞</span>
+      <span class="contact-btn__text">
+        <span class="contact-btn__title" data-en="Call Us" data-sv="Ring Oss">Ring Oss</span>
+        <span class="contact-btn__sub">+46 793 421 186</span>
+      </span>
+      <span class="contact-btn__arrow">→</span>
+    </a>
   </div>
 </div>
     </div>
@@ -677,12 +676,18 @@
 
   <script src="js/main.js"></script>
 
-  <!-- FLOATING HOTLINE -->
+  <!-- FLOATING CONTACT BUTTONS -->
   <div class="hotline-float">
-    <div class="hotline-btn hotline-btn--phone" onclick="window.open('https://forms.gle/wkUxGVBScN9rTP6o8','_blank')">
+    <div class="hotline-btn hotline-btn--form" onclick="window.open('https://forms.gle/wkUxGVBScN9rTP6o8','_blank')">
       📋
       <div class="hotline-tooltip">
-        Beställ nu: <a href="https://forms.gle/wkUxGVBScN9rTP6o8" target="_blank" rel="noopener">Order Form</a>
+        <span data-en="Order Online" data-sv="Beställ Online">Beställ Online</span>
+      </div>
+    </div>
+    <div class="hotline-btn hotline-btn--call" onclick="window.location.href='tel:+46793421186'">
+      📞
+      <div class="hotline-tooltip">
+        <span data-en="Call Us" data-sv="Ring Oss">Ring Oss</span>
       </div>
     </div>
   </div>
