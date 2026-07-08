@@ -3,8 +3,8 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <meta name="description" content="Restaurang med asiatisk fusjonsmat i Sverige. Färsk, säsongens råvaror, varm atmosfär." />
-  <title>Verdant · Restaurang</title>
+  <meta name="description" content="Oishi Food & Milktea — Äkta asiatiska smaker och bubble tea i Borås. Varm, trevlig atmosfär." />
+  <title>Oishi Food & Milktea · Borås</title>
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
   <link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,300;0,9..144,400;0,9..144,500;0,9..144,600;1,9..144,300;1,9..144,400&family=Outfit:wght@200;300;400;500;600;700&display=swap" rel="stylesheet" />
@@ -19,7 +19,7 @@
     </video>
     <div class="video-intro__overlay"></div>
     <div class="video-intro__logo">
-      <img src="images/logo.png" alt="Verdant" />
+      <img src="images/logo.png" alt="Oishi" />
       <div class="video-intro__shimmer"></div>
     </div>
     <div class="video-intro__skip" id="videoIntroSkip">Tap to skip ▸</div>
@@ -32,19 +32,20 @@
   <header class="nav" id="nav">
     <div class="nav__inner">
       <a href="#top" class="nav__logo">
-        <img src="images/logo.png" alt="Verdant" class="nav__logo-img" />
-        <span class="nav__logo-text" data-en="Verdant" data-sv="Verdant"></span>
+        <img src="images/logo.png" alt="Oishi" class="nav__logo-img" />
+        <!-- <span class="nav__logo-text" data-en="Verdant" data-sv="Verdant"></span> -->
       </a>
       <nav class="nav__links" id="navLinks">
-        <a href="#about" data-en="Our Story" data-sv="Vår Historia">Vår Historia</a>
+        <a href="#about" data-en="About Us" data-sv="Om Oss">Om Oss</a>
         <a href="#menu" data-en="Menu" data-sv="Meny">Meny</a>
-        <a href="#chef" data-en="Chef" data-sv="Kocken">Kocken</a>
-        <a href="#location" data-en="Location" data-sv="Hitta Hit">Hitta Hit</a>
+        <a href="#gallery" data-en="Gallery" data-sv="Galleri">Galleri</a>
+        <a href="#location" data-en="Find Us" data-sv="Hitta Oss">Hitta Oss</a>
         <div class="lang-toggle">
           <button class="lang-btn is-active" data-lang="sv">SV</button>
+          <span class="lang-toggle__divider">/</span>
           <button class="lang-btn" data-lang="en">EN</button>
         </div>
-        <a href="tel:+46793421186" class="nav__cta" data-en="Order Now" data-sv="Beställ Nu">Beställ Nu</a>
+        <a href="https://forms.gle/wkUxGVBScN9rTP6o8" target="_blank" rel="noopener" class="nav__cta" data-en="Order Now" data-sv="Beställ Nu">Beställ Nu</a>
       </nav>
       <button class="nav__burger" id="navBurger" aria-label="Menu"><span></span><span></span><span></span></button>
     </div>
@@ -71,16 +72,16 @@
     <div class="wrap hero__inner">
       <div class="hero__col hero__col--main">
         <div class="hero__brand reveal">
-          <img src="images/logo.png" alt="Verdant" class="hero__brand-img" />
+          <img src="images/logo.png" alt="Oishi" class="hero__brand-img" />
           <span class="hero__brand-name"></span>
         </div>
         <h1 class="hero__title">
-          <span class="reveal" data-en="Asian Fusion" data-sv="Asiatisk Fusion">Asiatisk Fusion</span>
-          <span class="reveal hero__title-em" data-en="with Nordic Soul" data-sv="med Nordisk Själ">med Nordisk Själ</span>
+          <span class="reveal" data-en="Oishi Food" data-sv="Oishi Food">Oishi Food</span>
+          <span class="reveal hero__title-em" data-en="& Milktea" data-sv="& Milktea">& Milktea</span>
         </h1>
-        <p class="hero__lead reveal" data-en="Fresh ingredients, bold flavors, and a warm atmosphere — where Asian culinary tradition meets Scandinavian simplicity." data-sv="Färska råvaror, djärva smaker och en varm atmosfär — där asiatisk mattradition möter skandinavisk enkelhet.">Färska råvaror, djärva smaker och en varm atmosfär — där asiatisk mattradition möter skandinavisk enkelhet.</p>
+        <p class="hero__lead reveal" data-en="Discover authentic Asian flavors and premium bubble tea in a warm, welcoming atmosphere." data-sv="Upptäck äkta asiatiska smaker och premium bubble tea i en varm, trevlig atmosfär.">Upptäck äkta asiatiska smaker och premium bubble tea i en varm, trevlig atmosfär.</p>
         <div class="hero__actions reveal">
-          <a href="tel:+46793421186" class="btn btn--gold" data-en="Order Now" data-sv="Beställ Nu">Beställ Nu</a>
+          <a href="https://forms.gle/wkUxGVBScN9rTP6o8" target="_blank" rel="noopener" class="btn btn--gold" data-en="Order Now" data-sv="Beställ Nu">Beställ Nu</a>
           <a href="#menu" class="btn btn--line" data-en="View Menu" data-sv="Se Meny">Se Meny</a>
         </div>
       </div>
@@ -89,38 +90,32 @@
           <div class="hero__card-mark">🍜</div>
           <p class="hero__card-quote" data-en='"The perfect dish is when nothing is left to take away."' data-sv='"Den perfekta rätten är när inget finns kvar att ta bort."'>"Den perfekta rätten är när inget finns kvar att ta bort."</p>
           <div class="hero__card-meta">
-            <div><span class="num" data-en="50+" data-sv="50+">50+</span><span class="lbl" data-en="Dishes" data-sv="Rätter">Rätter</span></div>
-            <div><span class="num">4.8</span><span class="lbl" data-en="Rating" data-sv="Betyg">Betyg</span></div>
-            <div><span class="num" data-en="2 langs" data-sv="2 språk">2 språk</span><span class="lbl" data-en="Menu" data-sv="Meny">Meny</span></div>
+            <div><span class="num">🍜</span><span class="lbl" data-en="Asian Kitchen" data-sv="Asiatiskt Kök">Asiatiskt Kök</span></div>
+            <div><span class="num">🧋</span><span class="lbl" data-en="Bubble Tea" data-sv="Bubble Tea">Bubble Tea</span></div>
+            <div><span class="num">🫶</span><span class="lbl" data-en="Warm Vibe" data-sv="Trevlig Stämning">Trevlig Stämning</span></div>
           </div>
         </div>
       </aside>
     </div>
     <div class="hero__ticker" aria-hidden="true">
       <div class="hero__ticker-track">
-        <span>Fresh · Asian · Fusion · Nordic · Verdant ·&nbsp;</span><span>Fresh · Asian · Fusion · Nordic · Verdant ·&nbsp;</span>
+        <span>Oishi · Asian · Bubble Tea · Borås · Fresh ·&nbsp;</span><span>Oishi · Asian · Bubble Tea · Borås · Fresh ·&nbsp;</span>
       </div>
     </div>
   </section>
 
-  <!-- ═══ ABOUT ═══ -->
+  <!-- ═══ OM OSS ═══ -->
   <section class="about section-soft" id="about">
     <div class="orb orb--gold" style="top:15%;right:-6%;opacity:0.15" data-parallax="0.04"></div>
     <div class="orb orb--wine" style="bottom:10%;left:-4%;opacity:0.10" data-parallax="-0.03"></div>
     <div class="wrap about__grid">
       <div class="about__label reveal">
-        <span class="idx">01</span><span class="idx-line"></span><span class="idx-txt" data-en="Our Story" data-sv="Vår Historia">Vår Historia</span>
+        <span class="idx">01</span><span class="idx-line"></span><span class="idx-txt" data-en="About Us" data-sv="Om Oss">Om Oss</span>
       </div>
       <div class="about__body reveal-stagger">
-        <h2 class="h2 reveal" data-en="Where Asian flavors meet Nordic soul — every dish tells a story." data-sv="Där asiatiska smaker möter nordisk själ — varje rätt berättar en historia.">Där asiatiska smaker möter nordisk själ — varje rätt berättar en historia.</h2>
+        <h2 class="h2 reveal" data-en="Discover authentic Asian flavors with us!" data-sv="Upptäck äkta asiatiska smaker hos oss!">Upptäck äkta asiatiska smaker hos oss!</h2>
         <div class="about__cols">
-          <p class="reveal" data-en="Verdant was born from the belief that great food doesn't need to be complicated. We honor seasonal ingredients, prepared with restraint and respect for nature." data-sv="Verdant föddes ur tron att bra mat inte behöver vara komplicerad. Vi hedrar säsongsbundna råvaror, tillagade med återhållsamhet och respekt för naturen.">Verdant föddes ur tron att bra mat inte behöver vara komplicerad. Vi hedrar säsongsbundna råvaror, tillagade med återhållsamhet och respekt för naturen.</p>
-          <p class="reveal" data-en="Every detail — from warm lighting to the sizzle of the open kitchen — is designed to help you slow down and savor." data-sv="Varje detalj — från varm belysning till sizzlet från det öppna köket — är designad för att hjälpa dig sakta ner och njuta.">Varje detalj — från varm belysning till sizzlet från det öppna köket — är designad för att hjälpa dig sakna ner och njuta.</p>
-        </div>
-        <div class="about__stats reveal">
-          <div><span class="about__stat-num">50+</span><span class="about__stat-lbl" data-en="Dishes" data-sv="Rätter">Rätter</span></div>
-          <div><span class="about__stat-num">2</span><span class="about__stat-lbl" data-en="Languages" data-sv="Språk">Språk</span></div>
-          <div><span class="about__stat-num">100%</span><span class="about__stat-lbl" data-en="Fresh" data-sv="Färskt">Färskt</span></div>
+          <p class="reveal" data-en="With a chef who has nearly 10 years of experience in Asian cuisine, we offer genuine Asian dishes and bubble tea of the highest quality. Welcome in and enjoy delicious food, great drinks and a warm, pleasant atmosphere!" data-sv="Med en köksmästare som har nästan 10 års erfarenhet av det asiatiska köket erbjuder vi genuina asiatiska rätter och bubble tea av hög kvalitet. Välkommen in och njut av utsökt mat, goda drycker och en varm, trevlig atmosfär!">Med en köksmästare som har nästan 10 års erfarenhet av det asiatiska köket erbjuder vi genuina asiatiska rätter och bubble tea av hög kvalitet. Välkommen in och njut av utsökt mat, goda drycker och en varm, trevlig atmosfär!</p>
         </div>
       </div>
     </div>
@@ -571,39 +566,48 @@
       <div class="menu__cta-bar reveal">
   <div class="menu__cta-item">
     <div class="menu__cta-main">
-      <span class="menu__cta-icon">📞</span>
-
-      <a href="tel:+46793421186" class="menu__cta-phone">
-        +46 793 421 186
+      <span class="menu__cta-icon">📋</span>
+      <a href="https://forms.gle/wkUxGVBScN9rTP6o8" target="_blank" rel="noopener" class="menu__cta-phone" data-en="Order via Form" data-sv="Beställ via formulär">
+        Beställ via formulär
       </a>
     </div>
-
     <span
       class="menu__cta-label"
-      data-en="Call to pre-order"
-      data-sv="Ring för att förbeställa"
+      data-en="Place your order online"
+      data-sv="Lägg din beställning online"
     >
-      Ring för att förbeställa
+      Lägg din beställning online
     </span>
   </div>
 </div>
     </div>
   </section>
 
-  <!-- ═══ CHEF ═══ -->
-  <section class="chef section-soft" id="chef">
+  <!-- ═══ GALLERY ═══ -->
+  <section class="chef section-soft" id="gallery">
     <div class="orb orb--gold" style="bottom:5%;right:-3%;opacity:0.15" data-parallax="0.03"></div>
-    <div class="wrap chef__grid">
-      <div class="chef__portrait reveal">
-        <div class="chef__frame"><span class="chef__ph">👨‍🍳</span></div>
-        <span class="chef__tag">Executive Chef</span>
-      </div>
-      <div class="chef__body">
-        <div class="about__label reveal"><span class="idx">03</span><span class="idx-line"></span><span class="idx-txt" data-en="Chef" data-sv="Kocken">Kocken</span></div>
-        <h2 class="h2 reveal">Bảo MasterChef</h2>
-        <p class="reveal" data-en="With over 20 years at renowned restaurants in Copenhagen and Tokyo, Chef Lê An brings the philosophy of 'less is more' to every plate." data-sv="Med över 20 år på välkända restauranger i Köpenhamn och Tokyo tar kocken Lê An filosofin 'less is more' till varje tallrik.">Med över 20 år på välkända restauranger i Köpenhamn och Tokyo tar kocken Lê An filosofin 'less is more' till varje tallrik.</p>
-        <blockquote class="chef__quote reveal" data-en="Cooking is how I tell the story of earth, of seasons, and of stillness." data-sv="Matlagning är hur jag berättar historien om jorden, om årstider och om stillhet.">Matlagning är hur jag berättar historien om jorden, om årstider och om stillhet.</blockquote>
-        <p class="chef__sign reveal">— Bảo MasterChef</p>
+    <div class="wrap">
+      <div class="about__label reveal"><span class="idx">03</span><span class="idx-line"></span><span class="idx-txt" data-en="Gallery" data-sv="Galleri">Galleri</span></div>
+      <h2 class="h2 reveal" data-en="A Taste of What Awaits" data-sv="En försmak av vad som väntar">En försmak av vad som väntar</h2>
+      <div class="gallery__grid">
+        <div class="gallery__item reveal">
+          <div class="gallery__placeholder"><span>🍜</span><p data-en="Asian Dishes" data-sv="Asiatiska Rätter">Asiatiska Rätter</p></div>
+        </div>
+        <div class="gallery__item reveal">
+          <div class="gallery__placeholder"><span>🧋</span><p data-en="Bubble Tea" data-sv="Bubble Tea">Bubble Tea</p></div>
+        </div>
+        <div class="gallery__item reveal">
+          <div class="gallery__placeholder"><span>🥟</span><p data-en="Fresh & Tasty" data-sv="Färskt & Gott">Färskt & Gott</p></div>
+        </div>
+        <div class="gallery__item reveal">
+          <div class="gallery__placeholder"><span>🍛</span><p data-en="Korean Favorites" data-sv="Koreanska Favoriter">Koreanska Favoriter</p></div>
+        </div>
+        <div class="gallery__item reveal">
+          <div class="gallery__placeholder"><span>🥢</span><p data-en="Wok & Noodles" data-sv="Wok & Nudlar">Wok & Nudlar</p></div>
+        </div>
+        <div class="gallery__item reveal">
+          <div class="gallery__placeholder"><span>✨</span><p data-en="Cozy Atmosphere" data-sv="Trevlig Atmosfär">Trevlig Atmosfär</p></div>
+        </div>
       </div>
     </div>
   </section>
@@ -613,23 +617,23 @@
     <div class="wrap">
       <div class="map-info reveal">
         <div class="map-info__label">
-          <span class="idx">04</span><span class="idx-line"></span><span class="idx-txt" data-en="Location" data-sv="Hitta Hit">Hitta Hit</span>
+          <span class="idx">04</span><span class="idx-line"></span><span class="idx-txt" data-en="Find Us" data-sv="Hitta Oss">Hitta Oss</span>
         </div>
-        <h2 class="map-info__title" data-en="Find Your Way to Verdant" data-sv="Hitta till Verdant">Hitta till Verdant</h2>
-        <p class="map-info__text" data-en="Nestled in the heart of the city, Verdant is your oasis of Asian flavors with Nordic soul." data-sv="Nestlad i hjärtat av staden är Verdant din oas av asiatiska smaker med nordisk själ.">Nestlad i hjärtat av staden är Verdant din oas av asiatiska smaker med nordisk själ.</p>
+        <h2 class="map-info__title" data-en="Find Oishi Food & Milktea" data-sv="Hitta till Oishi Food & Milktea">Hitta till Oishi Food & Milktea</h2>
+        <p class="map-info__text" data-en="Welcome to Oishi! Authentic Asian cuisine and bubble tea in the heart of Borås." data-sv="Välkommen till Oishi! Äkta asiatiskt kök och bubble tea i hjärtat av Borås.">Välkommen till Oishi! Äkta asiatiskt kök och bubble tea i hjärtat av Borås.</p>
         <div class="map-info__details">
           <div class="map-info__detail">
             <span class="map-info__icon">📍</span>
             <div>
               <span class="map-info__label-text" data-en="Address" data-sv="Adress">Adress</span>
-              <span class="map-info__value" data-en="12 Rừng Xanh St, District 1" data-sv="12 Rừng Xanh St, District 1">12 Rừng Xanh St, District 1</span>
+              <span class="map-info__value">Österlånggatan 51, 503 37, Borås</span>
             </div>
           </div>
           <div class="map-info__detail">
             <span class="map-info__icon">🕐</span>
             <div>
               <span class="map-info__label-text" data-en="Hours" data-sv="Öppettider">Öppettider</span>
-              <span class="map-info__value" data-en="Mon–Sun · 17:00–23:00" data-sv="Mån–Sön · 17:00–23:00">Mån–Sön · 17:00–23:00</span>
+              <span class="map-info__value" data-en="Mon–Fri: 11:00–20:00 / Sat: 12:00–19:00 / Sun: Closed" data-sv="Mån–Fre: 11:00–20:00 / Lör: 12:00–19:00 / Sön: Stängt">Mån–Fre: 11:00–20:00 · Lör: 12:00–19:00 · Sön: Stängt</span>
             </div>
           </div>
           <div class="map-info__detail">
@@ -643,13 +647,13 @@
             <span class="map-info__icon">✉️</span>
             <div>
               <span class="map-info__label-text">Email</span>
-              <span class="map-info__value">hello@verdant.restaurant</span>
+              <span class="map-info__value"><a href="mailto:Oishistreetkitchen@outlook.com">Oishistreetkitchen@outlook.com</a></span>
             </div>
           </div>
         </div>
       </div>
       <div class="map-container reveal">
-        <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3919.531!2d106.6961!3d10.7756!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x31752f4b3330bcc7%3A0x4c6e0e84e5a23c2e!2sQu%E1%BA%ADn%201%2C%20TP.HCM!5e0!3m2!1svi!2s!4v1700000000000!5m2!1svi!2s" width="100%" height="400" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+        <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2279.5!2d12.939978!3d57.719770!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x465aa0e0b0e0b0b1%3A0x1234567890abcdef!2s%C3%96sterl%C3%A5nggatan+51%2C+503+37+Bor%C3%A5s!5e0!3m2!1ssv!2sse!4v1700000000000!5m2!1ssv!2sse" width="100%" height="400" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
       </div>
     </div>
   </section>
@@ -658,15 +662,15 @@
   <footer class="footer">
     <div class="wrap footer__grid">
       <div class="footer__brand">
-        <div class="footer__brand-row"><img src="images/logo.png" alt="Verdant" class="footer__logo-img" /><span class="footer__name">Verdant</span></div>
-        <p data-en="Asian fusion with Nordic soul." data-sv="Asiatisk fusion med nordisk själ.">Asiatisk fusion med nordisk själ.</p>
+        <div class="footer__brand-row"><img src="images/logo.png" alt="Oishi" class="footer__logo-img" /><span class="footer__name">Oishi Food & Milktea</span></div>
+        <p data-en="Authentic Asian flavors & bubble tea in Borås." data-sv="Äkta asiatiska smaker & bubble tea i Borås.">Äkta asiatiska smaker & bubble tea i Borås.</p>
       </div>
-      <div class="footer__col"><h4 data-en="Hours" data-sv="Öppettider">Öppettider</h4><p data-en="Mon–Sun" data-sv="Mån–Sön">Mån–Sön</p><p>17:00–23:00</p></div>
-      <div class="footer__col"><h4 data-en="Contact" data-sv="Kontakt">Kontakt</h4><p><a href="tel:+46793421186">+46 793 421 186</a></p><p>hello@verdant.restaurant</p></div>
+      <div class="footer__col"><h4 data-en="Hours" data-sv="Öppettider">Öppettider</h4><p data-en="Mon–Fri" data-sv="Mån–Fre">Mån–Fre</p><p>11:00–20:00</p><p data-en="Sat" data-sv="Lör">Lör</p><p>12:00–19:00</p><p data-en="Sun: Closed" data-sv="Sön: Stängt">Sön: Stängt</p></div>
+      <div class="footer__col"><h4 data-en="Contact" data-sv="Kontakt">Kontakt</h4><p><a href="tel:+46793421186">+46 793 421 186</a></p><p><a href="mailto:Oishistreetkitchen@outlook.com">Oishistreetkitchen@outlook.com</a></p><p>Österlånggatan 51, Borås</p></div>
       <div class="footer__col"><h4 data-en="Follow" data-sv="Följ">Följ</h4><p><a href="#">Instagram</a></p><p><a href="#">Facebook</a></p></div>
     </div>
     <div class="wrap footer__bottom">
-      <span>© 2026 Oishi Restaurant.</span>
+      <span>© 2026 Oishi Food & Milktea.</span>
       <span>Crafted by Ryan Pham 🌿</span>
     </div>
   </footer>
@@ -675,10 +679,10 @@
 
   <!-- FLOATING HOTLINE -->
   <div class="hotline-float">
-    <div class="hotline-btn hotline-btn--phone" onclick="window.location.href='tel:+46793421186'">
-      📞
+    <div class="hotline-btn hotline-btn--phone" onclick="window.open('https://forms.gle/wkUxGVBScN9rTP6o8','_blank')">
+      📋
       <div class="hotline-tooltip">
-        Ring oss: <a href="tel:+46793421186">+46 793 421 186</a>
+        Beställ nu: <a href="https://forms.gle/wkUxGVBScN9rTP6o8" target="_blank" rel="noopener">Order Form</a>
       </div>
     </div>
   </div>

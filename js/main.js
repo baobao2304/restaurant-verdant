@@ -1,11 +1,11 @@
-// Verdant — Premium interactions & animations v3
+// Oishi Food & Milktea — Premium interactions & animations v3
 (function () {
   "use strict";
 
   // ── Loading Screen ──
   const loader = document.createElement("div");
   loader.className = "loader";
-  loader.innerHTML = `<div class="loader__mark"><img src="images/logo.png" alt="Verdant" style="height:48px;width:auto;border-radius:8px" /></div><div class="loader__bar"></div>`;
+  loader.innerHTML = `<div class="loader__mark"><img src="images/logo.png" alt="Oishi" style="height:48px;width:auto;border-radius:8px" /></div><div class="loader__bar"></div>`;
   document.body.prepend(loader);
 
   window.addEventListener("load", () => {
@@ -129,11 +129,12 @@
   }, { threshold: 0.1, rootMargin: "0px 0px -40px 0px" });
   document.querySelectorAll(".reveal:not(.hero .reveal)").forEach((el) => revealObserver.observe(el));
 
-  // ── Menu Tabs ──
+  // ── Menu Tabs (desktop only) ──
   const tabs = document.querySelectorAll(".menu__tab");
   const panels = document.querySelectorAll(".menu__panel");
   tabs.forEach((tab) => {
     tab.addEventListener("click", () => {
+      if (window.innerWidth <= 768) return; // skip on mobile (flat list)
       const cat = tab.dataset.cat;
       tabs.forEach((t) => t.classList.remove("is-active"));
       tab.classList.add("is-active");
@@ -159,16 +160,62 @@
 
   // ── Language Toggle ──
   const langBtns = document.querySelectorAll(".lang-btn");
-  langBtns.forEach((btn) => {
-    btn.addEventListener("click", () => {
-      const lang = btn.dataset.lang;
-      langBtns.forEach((b) => b.classList.remove("is-active"));
-      btn.classList.add("is-active");
-      document.querySelectorAll("[data-en]").forEach((el) => {
-        el.textContent = el.dataset[lang] || el.dataset.en;
-      });
+  function setLanguage(lang) {
+    langBtns.forEach((b) => b.classList.toggle("is-active", b.dataset.lang === lang));
+    document.querySelectorAll("[data-en]").forEach((el) => {
+      el.textContent = el.dataset[lang] || el.dataset.en;
     });
+  }
+  langBtns.forEach((btn) => {
+    btn.addEventListener("click", () => setLanguage(btn.dataset.lang));
   });
+
+  // ── Mobile Menu: Flat List Mode ──
+  function setupMobileMenu() {
+    const isMobile = window.innerWidth <= 768;
+    const tabsContainer = document.getElementById("menuTabs");
+    const panelsContainer = document.getElementById("menuPanels");
+    if (!tabsContainer || !panelsContainer) return;
+
+    const panels = panelsContainer.querySelectorAll(".menu__panel");
+    const tabs = tabsContainer.querySelectorAll(".menu__tab");
+
+    // Remove any existing cat headings
+    panelsContainer.querySelectorAll(".menu__cat-heading").forEach(h => h.remove());
+
+    if (isMobile) {
+      // Show all panels with category headings
+      panels.forEach((panel) => {
+        panel.classList.add("is-active");
+        panel.style.display = "block";
+        // Find matching tab label
+        const cat = panel.dataset.cat;
+        const tab = tabsContainer.querySelector(`[data-cat="${cat}"]`);
+        const label = tab ? (document.documentElement.lang === 'en' ? tab.dataset.en : tab.dataset.sv) : cat;
+        // Insert heading before first dish
+        const firstDish = panel.querySelector(".dish");
+        if (firstDish) {
+          const heading = document.createElement("div");
+          heading.className = "menu__cat-heading";
+          heading.textContent = label;
+          panel.insertBefore(heading, firstDish);
+        }
+      });
+    } else {
+      // Desktop: tab mode
+      let activeFound = false;
+      panels.forEach((panel) => {
+        if (!activeFound && panel.classList.contains("is-active")) {
+          activeFound = true;
+        } else {
+          panel.classList.remove("is-active");
+        }
+      });
+      if (!activeFound && panels.length) panels[0].classList.add("is-active");
+    }
+  }
+  setupMobileMenu();
+  window.addEventListener("resize", setupMobileMenu);
 
   // ── Smooth Scroll ──
   document.querySelectorAll('a[href^="#"]').forEach((anchor) => {
@@ -198,7 +245,7 @@
   });
 
   // ── 3D Tilt Cards ──
-  const cards = document.querySelectorAll(".hero__card, .exp__card, .chef__frame");
+  const cards = document.querySelectorAll(".hero__card, .exp__card, .gallery__placeholder");
   cards.forEach((card) => {
     card.addEventListener("mousemove", (e) => {
       const rect = card.getBoundingClientRect();
