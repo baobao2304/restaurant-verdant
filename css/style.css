@@ -112,6 +112,10 @@
   --wine-light: #d4748a;
   --wine-glow: rgba(148,56,77,0.15);
 
+  /* ── Brown Sugar ── */
+  --brown: #5c3d2e;
+  --brown-light: #8b6b4a;
+
   /* ── Surfaces & Borders ── */
   --border-subtle: rgba(255,255,255,0.06);
   --border-gold: rgba(212,168,83,0.2);
@@ -1239,4 +1243,40 @@ section.section-visible{opacity:1;transform:translateY(0)}
     padding:18px 0 8px;margin-top:16px;
     border-bottom:1px solid var(--border-gold);
   }
+}
+
+/* ═══ BUBBLE TEA MENU SUBHEAD & FLAVOR GRID ═══ */
+.menu__subhead{
+  grid-column:1/-1;
+  font-family:var(--serif);font-size:1.15rem;font-weight:500;
+  color:var(--gold);letter-spacing:0.06em;
+  padding:24px 0 4px;margin-top:24px;
+  border-bottom:1px solid var(--border-gold);
+  display:flex;align-items:baseline;gap:12px;flex-wrap:wrap;
+}
+.menu__subhead:first-child{margin-top:0;}
+.menu__subhead-price{
+  font-family:var(--sans);font-size:0.78rem;font-weight:400;
+  color:var(--text-muted);letter-spacing:0.04em;
+  white-space:nowrap;
+}
+.menu__flavor-grid{
+  grid-column:1/-1;
+  display:flex;flex-wrap:wrap;gap:8px;
+  padding:12px 0 20px;
+}
+.menu__flavor-tag{
+  display:inline-flex;align-items:center;
+  padding:6px 14px;
+  font-family:var(--sans);font-size:0.8rem;font-weight:400;
+  color:var(--text);
+  background:rgba(212,168,83,0.08);
+  border:1px solid rgba(212,168,83,0.2);
+  border-radius:100px;
+  transition:all 0.25s ease;
+}
+.menu__flavor-tag:hover{
+  background:rgba(212,168,83,0.18);
+  border-color:var(--gold);
+  color:var(--gold);
 }
